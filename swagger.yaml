@@ -1,0 +1,192 @@
+swagger: "2.0"
+info:
+  title: Library books API
+  description: API description use api Key as "secretKey" to authorize.
+  version: 1.0.0
+host: localhost:3008
+basePath: /api/v1/library
+schemes:
+  - http
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: apikey
+    in: header
+ 
+  
+paths:
+  /{libraryId}/books:
+    get:
+      tags:
+       - "manager"
+      summary: Returns a list of books.
+      operationId: "getBooks"
+      description: "get all the books from a specific library"
+      produces:
+        - application/json
+      security:
+        - Bearer: []  
+      parameters:
+      - name: "libraryId"
+        in: "path"
+        description: "ID of library to get all books"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              type: "object"
+        "400":
+          description: "Unable to get  books currently. Please try again."      
+  /{libraryId}/book:
+    post:
+      tags:
+       - "manager"
+      summary: create a entry of book.
+      operationId: "creatBook"
+      description: "create a book in the library"
+      produces:
+        - application/json
+      security:
+        - Bearer: []  
+      parameters:
+      - name: "libraryId"
+        in: "path"
+        description: "ID of library to get all books"
+        required: true
+        type: "integer"
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/bookInfo'    
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              type: "object"
+        "400":
+          description: "Unable to create  books currently. Please try again."           
+          
+          
+  /{libraryId}/book/{Id}:
+    get:
+      tags:
+       - "manager"
+      summary: Returns a list of books.
+      operationId: "getBook"
+      description: "get  the books from a specific library"
+      produces:
+        - application/json
+      security:
+        - Bearer: []  
+      parameters:
+      - name: "libraryId"
+        in: "path"
+        description: "ID of library to get all books"
+        required: true
+        type: "integer"
+      - name: "Id"
+        in: "path"
+        description: "ID of book to get a book"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "object"
+            items:
+              type: "string"
+        "400":
+          description: "The book is not available right now " 
+    delete:
+      tags:
+       - "manager"
+      summary: Returns a list of books.
+      operationId: "destroyBooks"
+      description: "delete the book from a specific library"
+      produces:
+        - application/json
+      security:
+        - Bearer: []  
+      parameters:
+      - name: "libraryId"
+        in: "path"
+        description: "ID of library to get all books"
+        required: true
+        type: "integer"
+      - name: "Id"
+        in: "path"
+        description: "ID of book to get a book"
+        required: true
+        type: "integer"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "object"
+            items:
+              type: "string"
+        "400":
+          description: "The book is no available right now "         
+    put:
+      tags:
+       - "manager"
+      summary: Returns a list of books.
+      operationId: "updateBook"
+      description: "update a book from a specific library"
+      produces:
+        - application/json
+      security:
+        - Bearer: []  
+      parameters:
+      - name: "libraryId"
+        in: "path"
+        description: "ID of library to get all books"
+        required: true
+        type: "integer"
+      - name: "Id"
+        in: "path"
+        description: "ID of book to get a book"
+        required: true
+        type: "integer"
+      - name: body
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/bookInfo'
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            type: "object"
+        "400":
+          description: "The book is no available right now "     
+          
+definitions:
+  bookInfo:
+    description: "book details"
+    properties:
+      title:
+       type: "string"
+       description: "book name"
+      author:
+       type: "string"
+       description: "author book name" 
+      ISBN:
+       type: "string"
+       description: "ISBN book ISB number"  
+      releaseDate:
+        type: "string"
+        description: "book release date"
+        format: "date-time" 
+    
+    
+            
+            

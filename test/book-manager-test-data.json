@@ -1,0 +1,25 @@
+{
+  "createBook": {
+    "title": "new Life",
+    "author": "Sheldon",
+    "ISBN": "121321321341",
+    "releaseDate": "2020-07-25T11:16:38.000Z"
+  },
+  "createBookSuccess": {
+    "status_code": 201,
+    "Id": 4,
+    "msg": "book has been created successfully"
+  },
+  "getAllBooks": [
+    {
+      "Id": 1,
+      "libraryId": 1,
+      "title": "new Life",
+      "author":  "Sheldon",
+      "ISBN": "121321321341",
+      "releaseDate": "2020-07-25T11:16:38.000Z",
+      "created_at": "2020-07-25T11:07:41.000Z",
+      "updated_at": "2020-07-25T11:18:01.000Z"
+    }
+  ]
+}

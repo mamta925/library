@@ -1,0 +1,20 @@
+{
+    "port": 3008,
+    "mysql": {
+        "host": "localhost",
+        "user": "root",
+        "password": "root",
+        "database": "library",
+        "dialect": "mysql",
+        "pool": {
+            "max": 5,
+            "min": 0,
+            "idle": 10000
+        },
+        "options": {
+            "logging": true,
+            "dialect": "mysql"
+        }
+    },
+    "secretKey": "secretKey"
+}

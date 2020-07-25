@@ -1,0 +1,26 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "RESTful web service for a Library.",
+  "main": "server.js",
+  "scripts": {
+    "test": "nyc --reporter=text mocha 'test/*.js'"
+  },
+  "author": "Mamta",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "config": "^3.3.1",
+    "express-validator": "^5.3.1",
+    "isbn-validate": "^1.0.3",
+    "mocha": "^8.0.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "nyc": "^15.1.0",
+    "sequelize": "^6.3.3",
+    "sinon": "^9.0.2",
+    "swagger-ui-express": "^4.1.4",
+    "wagner-core": "^0.2.0",
+    "yamljs": "^0.3.0"
+  }
+}
