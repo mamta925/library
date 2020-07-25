@@ -7,6 +7,6 @@ please put library Id 1 by default
 Do authorization if you get invalid token use :   secretKey
 
 written test cases
-integrated lib
+integrated swagger
 
 
