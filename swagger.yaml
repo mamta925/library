@@ -21,7 +21,7 @@ paths:
        - "manager"
       summary: Returns a list of books.
       operationId: "getBooks"
-      description: "get all the books from a specific library"
+      description: "get all the books from a specific library  default 1"
       produces:
         - application/json
       security:
@@ -29,7 +29,7 @@ paths:
       parameters:
       - name: "libraryId"
         in: "path"
-        description: "ID of library to get all books"
+        description: "ID of library to get all books default 1"
         required: true
         type: "integer"
       responses:
@@ -47,7 +47,7 @@ paths:
        - "manager"
       summary: create a entry of book.
       operationId: "creatBook"
-      description: "create a book in the library"
+      description: "create a book in the library  default 1"
       produces:
         - application/json
       security:
@@ -55,7 +55,7 @@ paths:
       parameters:
       - name: "libraryId"
         in: "path"
-        description: "ID of library to get all books"
+        description: "ID of library to get all books  default 1"
         required: true
         type: "integer"
       - name: body
@@ -80,7 +80,7 @@ paths:
        - "manager"
       summary: Returns a list of books.
       operationId: "getBook"
-      description: "get  the books from a specific library"
+      description: "get  the books from a specific library  default 1"
       produces:
         - application/json
       security:
@@ -88,7 +88,7 @@ paths:
       parameters:
       - name: "libraryId"
         in: "path"
-        description: "ID of library to get all books"
+        description: "ID of library to get all books  default 1"
         required: true
         type: "integer"
       - name: "Id"
@@ -118,7 +118,7 @@ paths:
       parameters:
       - name: "libraryId"
         in: "path"
-        description: "ID of library to get all books"
+        description: "ID of library to get all books  default 1"
         required: true
         type: "integer"
       - name: "Id"
@@ -148,7 +148,7 @@ paths:
       parameters:
       - name: "libraryId"
         in: "path"
-        description: "ID of library to get all books"
+        description: "ID of library to get all books  default 1"
         required: true
         type: "integer"
       - name: "Id"
