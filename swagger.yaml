@@ -19,7 +19,7 @@ paths:
     get:
       tags:
        - "manager"
-      summary: Returns a  book info provided ID.
+      summary: Returns list of books.
       operationId: "getBooks"
       description: "get all the books from a specific library"
       produces:
@@ -78,7 +78,7 @@ paths:
     get:
       tags:
        - "manager"
-      summary: Returns a list of books.
+      summary: Returns a  book info provided ID
       operationId: "getBook"
       description: "get  the books from a specific library  default 1"
       produces:
