@@ -19,7 +19,7 @@ paths:
     get:
       tags:
        - "manager"
-      summary: Returns a list of books.
+      summary: Returns a  book info provided ID.
       operationId: "getBooks"
       description: "get all the books from a specific library"
       produces:
@@ -108,7 +108,7 @@ paths:
     delete:
       tags:
        - "manager"
-      summary: Returns a list of books.
+      summary: Delete a book entry by passing ID.
       operationId: "destroyBooks"
       description: "delete the book from a specific library"
       produces:
@@ -138,7 +138,7 @@ paths:
     put:
       tags:
        - "manager"
-      summary: Returns a list of books.
+      summary: update a book by providing book ID.
       operationId: "updateBook"
       description: "update a book from a specific library"
       produces:
