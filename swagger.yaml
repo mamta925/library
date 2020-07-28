@@ -3,7 +3,7 @@ info:
   title: Library books API
   description: API description use api Key as "secretKey" to authorize.
   version: 1.0.0
-host: 35.153.194.55:3008
+host: 18.210.15.234:3008
 basePath: /api/v1/library
 schemes:
   - http
