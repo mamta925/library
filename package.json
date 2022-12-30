@@ -14,7 +14,7 @@
     "express": "^4.17.1",
     "express-validator": "^5.3.1",
     "isbn-validate": "^1.0.3",
-    "mocha": "^8.0.1",
+    "mocha": "^8.4.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "nyc": "^15.1.0",
