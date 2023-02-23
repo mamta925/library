@@ -18,7 +18,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "nyc": "^15.1.0",
-    "sequelize": "^6.3.3",
+    "sequelize": "^6.28.2",
     "sinon": "^9.0.2",
     "swagger-ui-express": "^4.1.4",
     "wagner-core": "^0.2.0",
